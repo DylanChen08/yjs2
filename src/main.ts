@@ -9,6 +9,7 @@ import App from './App.vue'
 import router from './router'
 
 import Quill from 'quill'
+import * as Y from 'yjs'
 
 import QuillCursors from 'quill-cursors'
 import { WebsocketProvider } from 'y-websocket'
@@ -18,7 +19,7 @@ import { QuillBinding } from 'y-quill'
 Quill.register('modules/cursors', QuillCursors)
 
 
-new Quill(document.getElementById('editor') as HTMLElement, {
+new Quill(document.getElementById('app') as HTMLElement, {
   modules: {
     cursors: true,
     toolbar: [
@@ -53,7 +54,6 @@ const yDoc = new Y.Doc()
 
 const yText = yDoc.getText('quill')
 
-const yCursor = yText.getCursor()
 
 
 const provider = new WebsocketProvider(
