@@ -66,8 +66,7 @@ provider.on('synced', () => {
   console.log('synced')
 })
 
-// 将yjs文档与quill绑定
-const binding = new QuillBinding(yText, quill, provider)
+
 
 
 
@@ -78,3 +77,7 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
+
+
+// 将yjs文档与quill绑定
+new QuillBinding(yText, quill, provider.awareness)
