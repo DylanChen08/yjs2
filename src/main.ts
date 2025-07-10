@@ -5,7 +5,10 @@ const users = doc.getMap("users"); // 创建了一个Map类型的Yjs对象
 
 const user1 = new Y.Map();
 const tag = new Y.Array();
-tag.push(["tag1", "tag2"]);
+tag.push(["tag1", "tag2", [{
+  "name": "tag8",
+  "value": "tag8"
+}]]);
 user1.set("tags", tag);
 
 // 接下来再将这个user1添加到users中
